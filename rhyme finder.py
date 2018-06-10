@@ -21,7 +21,7 @@ def find_rhyming_words(wordToRhyme: str, length=5)->None:
     if wordToRhyme == 'quit':
         quit()
         
-    with open("words", "r") as word:
+    with open("words", "r", encoding='utf-8') as word:
         word_set = set(word.read().split())
         
     if not (wordToRhyme.lower() in word_set or wordToRhyme.capitalize() in word_set):
